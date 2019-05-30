@@ -11,8 +11,6 @@ import java.util.Map;
 
 /**
  * RPC Handler（RPC request processor）
- *
- * @author luxiaoxun
  */
 @Slf4j
 public class RpcHandler extends SimpleChannelInboundHandler<RpcRequest> {

@@ -2,8 +2,6 @@ package com.basic.rpc.zk;
 
 /**
  * ZooKeeper constant
- *
- * @author huangyong
  */
 public interface Constant {
 

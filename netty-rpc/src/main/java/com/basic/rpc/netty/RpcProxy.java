@@ -3,10 +3,14 @@ package com.basic.rpc.netty;
 import com.basic.rpc.zk.ServiceDiscovery;
 import org.springframework.cglib.proxy.InvocationHandler;
 import org.springframework.cglib.proxy.Proxy;
+import org.springframework.util.StringUtils;
 
 import java.lang.reflect.Method;
 import java.util.UUID;
 
+/**
+ * @author taomee517
+ */
 public class RpcProxy {
 
     private String serverAddress;
@@ -50,7 +54,7 @@ public class RpcProxy {
                         // 通过 RPC 客户端发送 RPC 请求并获取 RPC 响应
                         RpcResponse response = client.send(request);
 
-                        if (response.isError()) {
+                        if (!StringUtils.isEmpty(response.getError())) {
                             throw new Exception(response.getError());
                         } else {
                             return response.getResult();

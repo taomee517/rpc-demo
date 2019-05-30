@@ -63,7 +63,8 @@ public class RpcClient extends SimpleChannelInboundHandler<RpcResponse> {
             future.channel().writeAndFlush(request).sync();
 
             synchronized (obj) {
-                obj.wait(); // 未收到响应，使线程等待
+                // 未收到响应，使线程等待
+                obj.wait();
             }
 
             if (response != null) {

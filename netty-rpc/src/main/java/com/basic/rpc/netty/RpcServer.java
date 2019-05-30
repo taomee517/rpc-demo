@@ -95,7 +95,7 @@ public class RpcServer implements ApplicationContextAware,InitializingBean{
         if (serviceRegistry != null) {
             serviceRegistry.register(serverHost + ":" + serverPort);
         }
-//        // 等待服务端监听端口关闭
+       // 等待服务端监听端口关闭
         task.channel().closeFuture();
     }
 
