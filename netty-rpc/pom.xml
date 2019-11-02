@@ -13,7 +13,7 @@
 
     <properties>
         <zookeeper-version>3.4.14</zookeeper-version>
-        <netty-version>4.1.32.Final</netty-version>
+        <netty-version>4.1.42.Final</netty-version>
         <objenesis-version>3.0.1</objenesis-version>
         <cglib-version>3.2.10</cglib-version>
         <protostuff-version>1.6.0</protostuff-version>
